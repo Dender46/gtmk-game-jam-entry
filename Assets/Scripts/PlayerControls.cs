@@ -28,8 +28,8 @@ public class PlayerControls : MonoBehaviour {
     }
 
 	void Use() {
-		Collider2D hitCollider = Physics2D.OverlapCircle(transform.position, colliderRadius);
-		if (hitCollider.name == "Drink") {
+		Collider2D hitCollider = Physics2D.OverlapCircle(transform.position, colliderRadius, LayerMask.GetMask("Drinks"), -0.5f, 0.5f);
+		if (hitCollider) {
 			DrinkScript script = hitCollider.gameObject.GetComponent<DrinkScript>();
 			script.Use();
 		}
