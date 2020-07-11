@@ -3,16 +3,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour {
 
+	CharacterController2D movement;
 	PlayerInputActions playerActions;
-	[Range(0.0f, 5.0f)] [SerializeField] private float colliderRadius = 0.5f;
+	[Range(0.0f, 5.0f)] [SerializeField] float colliderRadius = 0.5f;
 
-	public CharacterController2D movement;
 	public float speed = 130f;
 
 	float horizontalMove;
 	bool jump	= false;
 
 	void Awake() {
+		movement = GetComponent<CharacterController2D>();
 		playerActions = new PlayerInputActions();
 		playerActions.Player.Move.performed += ctx => horizontalMove = ctx.ReadValue<Vector2>().x;
 		playerActions.Player.Jump.performed += ctx => jump = true;
@@ -28,7 +29,10 @@ public class PlayerControls : MonoBehaviour {
 
 	void Use() {
 		Collider2D hitCollider = Physics2D.OverlapCircle(transform.position, colliderRadius);
-		Debug.Log("Found: " + hitCollider);
+		if (hitCollider.name == "Drink") {
+			DrinkScript script = hitCollider.gameObject.GetComponent<DrinkScript>();
+			script.Use();
+		}
 	}
 
 	void FixedUpdate() {
