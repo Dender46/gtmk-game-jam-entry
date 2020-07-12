@@ -33,6 +33,7 @@ public class PlayerControls : MonoBehaviour {
 			DrinkScript script = hitCollider.gameObject.GetComponent<DrinkScript>();
 			script.Use();
 		}
+		GameObject.Find("Bartender").GetComponent<BartenderScript>().ServeDrink();
 	}
 
 	void FixedUpdate() {
