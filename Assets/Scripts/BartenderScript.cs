@@ -23,7 +23,7 @@ public class BartenderScript : MonoBehaviour
     void Update() {
         transform.position = Vector3.SmoothDamp(
             transform.position,
-            new Vector3(posX, -2.5f, transform.position.z),
+            new Vector3(posX, -2.0f, transform.position.z),
             ref velocity,
             smoothness
         );
