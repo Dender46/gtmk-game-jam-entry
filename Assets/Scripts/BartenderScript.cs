@@ -21,6 +21,9 @@ public class BartenderScript : MonoBehaviour
     }
 
     private IEnumerator ServeDrink() {
+        if (gameData.gameOver)
+            yield break;
+
         float waitFor = Mathf.Clamp(2.0f - gameData.playerAlcoholLevel * 0.0015f, 0.5f, 2.0f);
         Debug.Log("Waiting " + waitFor);
         yield return new WaitForSeconds(waitFor);

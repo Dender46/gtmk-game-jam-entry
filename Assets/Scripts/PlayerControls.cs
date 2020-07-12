@@ -24,12 +24,11 @@ public class PlayerControls : MonoBehaviour {
 		gameData = GameObject.Find("GameData").GetComponent<GameData>();
 
 		playerActions.Player.Move.performed += ctx => horizontalMove = ctx.ReadValue<Vector2>().x;
-		playerActions.Player.Jump.performed += ctx => jump = true;
 		playerActions.Player.Use.performed += ctx => StartCoroutine(Use());
 	}
 
 	IEnumerator Use() {
-		if (!canDrink)
+		if (!canDrink || gameData.gameOver)
 			yield break;
 
 		Collider2D hitCollider = Physics2D.OverlapCircle(transform.position, colliderRadius, LayerMask.GetMask("Drinks"), -0.5f, 0.5f);

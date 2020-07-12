@@ -19,7 +19,9 @@ public class DrinkScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Floor")
+        if (col.gameObject.name == "Floor") {
             Destroy(gameObject);
+            gameData.gameOver = true;
+        }
     }
 }

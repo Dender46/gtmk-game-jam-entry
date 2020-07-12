@@ -41,14 +41,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""9ff66d62-09ad-49bb-bd80-0a2203103085"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -274,12 +266,23 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d02e3f31-35fe-419e-81bb-116bee6e4331"",
+                    ""id"": ""3e394ae6-5af7-47ac-a256-80dd14597372"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Use"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""67e15621-7a91-463b-a4dd-ceaffa923393"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Jump"",
+                    ""action"": ""Use"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -860,7 +863,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Use = m_Player.FindAction("Use", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -925,7 +927,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Use;
-    private readonly InputAction m_Player_Jump;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -933,7 +934,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Use => m_Wrapper.m_Player_Use;
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -952,9 +952,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Use.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUse;
                 @Use.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUse;
                 @Use.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUse;
-                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -968,9 +965,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Use.started += instance.OnUse;
                 @Use.performed += instance.OnUse;
                 @Use.canceled += instance.OnUse;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
             }
         }
     }
@@ -1130,7 +1124,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnUse(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
