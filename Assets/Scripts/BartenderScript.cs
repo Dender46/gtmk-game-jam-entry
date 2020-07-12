@@ -9,11 +9,14 @@ public class BartenderScript : MonoBehaviour
     private float smoothness = 0.2f;
     private float posX;
 
-    private void Start() {
+    void Start() {
         posX = transform.position.x;
+        StartCoroutine(ServeDrink());
     }
 
-    public void ServeDrink() {
+    private IEnumerator ServeDrink() {
+        yield return new WaitForSeconds(2.0f);
+
         posX = Random.Range(3.0f, 15.0f);
         transform.position = new Vector3(posX, -6.0f, transform.position.z);
         //Start the coroutine we define below named ExampleCoroutine.
@@ -29,11 +32,12 @@ public class BartenderScript : MonoBehaviour
         );
     }
 
-    IEnumerator GenerateDrink()
+    private IEnumerator GenerateDrink()
     {
         yield return new WaitForSeconds(0.4f);
     
         GameObject newDrink = (GameObject)Instantiate(drinkPrefabs[Random.Range(0, drinkPrefabs.Length)], transform.position, Quaternion.identity);
         newDrink.GetComponent<Rigidbody2D>().velocity += new Vector2(Random.Range(-1.0f, 1.0f), 10.0f);
+        StartCoroutine(ServeDrink());
     }
 }
