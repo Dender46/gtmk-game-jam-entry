@@ -15,7 +15,5 @@ public class DrinkScript : MonoBehaviour
     public void Use() {
         Destroy(gameObject);
         gameData.playerAlcoholLevel += alcoholPower;
-        Debug.Log("Added alcohol: " + alcoholPower);
-        Debug.Log("Total alcohol: " + gameData.playerAlcoholLevel);
     }
 }
