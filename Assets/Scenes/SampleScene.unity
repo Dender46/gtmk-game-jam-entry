@@ -1249,16 +1249,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7882936355594729317, guid: e0a3cb1ebef6f5848a200f77362b4369,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7882936355594729317, guid: e0a3cb1ebef6f5848a200f77362b4369,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7882936356072103715, guid: e0a3cb1ebef6f5848a200f77362b4369,
         type: 3}
       propertyPath: m_Name
@@ -1267,12 +1257,12 @@ PrefabInstance:
     - target: {fileID: 7882936356072103719, guid: e0a3cb1ebef6f5848a200f77362b4369,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.55
+      value: 3.57
       objectReference: {fileID: 0}
     - target: {fileID: 7882936356072103719, guid: e0a3cb1ebef6f5848a200f77362b4369,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.08
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 7882936356072103719, guid: e0a3cb1ebef6f5848a200f77362b4369,
         type: 3}
@@ -1370,7 +1360,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 90387e870a162ec42bcc60a0980a4d7d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1388,7 +1378,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00013923645, y: 0.010513067}
+  m_Offset: {x: 0.006597042, y: 0.010513067}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1399,7 +1389,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 25.598713, y: 1.5733294}
+  m_Size: {x: 20.289783, y: 1.5733294}
   m_EdgeRadius: 0
 --- !u!4 &1030552696 stripped
 Transform:
@@ -2467,7 +2457,12 @@ PrefabInstance:
     - target: {fileID: 1768959659552793083, guid: 5d60d4d125b1ceb47b18cd6141a02dc7,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -4.5
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984446130993855309, guid: 5d60d4d125b1ceb47b18cd6141a02dc7,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6562582407228396796, guid: 5d60d4d125b1ceb47b18cd6141a02dc7,
         type: 3}

@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093531303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: 0}
+  m_LocalPosition: {x: 0, y: 0.28, z: 0.5}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 5128954315973253764}
@@ -126,4 +126,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drinkPrefabs:
+  - {fileID: 4589988323244468441, guid: a669849b861f72b4fad959d855299c27, type: 3}
+  - {fileID: 5549258329191814510, guid: c3982783ee63f634faa5db0d604f5ba6, type: 3}
+  - {fileID: 4482701840146729841, guid: 57c637918673dae4ea9906149c3fe129, type: 3}
+  - {fileID: 7882936356072103715, guid: e0a3cb1ebef6f5848a200f77362b4369, type: 3}
+  - {fileID: 3275300673734060215, guid: 1ec38e1aa27243445a1538bbfec34e8b, type: 3}
   - {fileID: 5995337282684208871, guid: acbd75535f43e384db3bf7aa39fa38cc, type: 3}
+  - {fileID: 2473478262078976226, guid: ca7c819e8fffcf644926277a49f11cf7, type: 3}

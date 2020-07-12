@@ -25,7 +25,7 @@ public class BartenderScript : MonoBehaviour
         Debug.Log("Waiting " + waitFor);
         yield return new WaitForSeconds(waitFor);
         
-        posX = Random.Range(5.0f, 15.0f);
+        posX = Random.Range(6.0f, 19.0f);
         transform.position = new Vector3(posX, -6.0f, transform.position.z);
         //Start the coroutine we define below named ExampleCoroutine.
         StartCoroutine(GenerateDrink());
