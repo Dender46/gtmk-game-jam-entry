@@ -4,15 +4,5 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float playerAlcoholLevel = 0.0f;
 }

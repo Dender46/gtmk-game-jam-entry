@@ -8,15 +8,20 @@ public class BartenderScript : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private float smoothness = 0.2f;
     private float posX;
+    private GameData gameData;
 
     void Start() {
         posX = transform.position.x;
+        gameData = GameObject.Find("GameData").GetComponent<GameData>();
+
         StartCoroutine(ServeDrink());
     }
 
     private IEnumerator ServeDrink() {
-        yield return new WaitForSeconds(2.0f);
-
+        float waitFor = Mathf.Min(2.0f, 2.0f - gameData.playerAlcoholLevel * 0.005f);
+        Debug.Log("Waiting " + waitFor);
+        yield return new WaitForSeconds(waitFor);
+        
         posX = Random.Range(3.0f, 15.0f);
         transform.position = new Vector3(posX, -6.0f, transform.position.z);
         //Start the coroutine we define below named ExampleCoroutine.

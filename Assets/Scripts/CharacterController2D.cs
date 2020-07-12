@@ -64,7 +64,6 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		
-		m_Animator.SetFloat ("Vertical Velocity", m_Rigidbody2D.velocity.y);
 		m_Animator.SetFloat ("Running", Mathf.Abs(m_Rigidbody2D.velocity.x));
 	}
 
