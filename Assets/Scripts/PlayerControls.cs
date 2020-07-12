@@ -56,7 +56,7 @@ public class PlayerControls : MonoBehaviour {
 			return;
 		}
 
-		movement.Move (horizontalMove * Random.Range(speed - gameData.playerAlcoholLevel * 0.3f, speed) * Time.fixedDeltaTime, false, jump);
+		movement.Move(horizontalMove * Random.Range(Mathf.Clamp(speed - gameData.playerAlcoholLevel * 0.3f, 0.0f, speed), speed) * Time.fixedDeltaTime, false, jump);
 		jump = false;
 	}
 
