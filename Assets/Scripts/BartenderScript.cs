@@ -10,11 +10,14 @@ public class BartenderScript : MonoBehaviour
     private float posX;
     private GameData gameData;
 
+    private bool bartenderStartedServing = false;
+
     void Start() {
         posX = transform.position.x;
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
 
-        StartCoroutine(ServeDrink());
+        if (gameData.gameHasStarted)
+            StartCoroutine(ServeDrink());
     }
 
     private IEnumerator ServeDrink() {
@@ -29,6 +32,12 @@ public class BartenderScript : MonoBehaviour
     }
 
     void Update() {
+        // Waiting for a player to drink first drink
+        if (gameData.gameHasStarted && !bartenderStartedServing) {
+            StartCoroutine(ServeDrink());
+            bartenderStartedServing = true;
+        }
+
         transform.position = Vector3.SmoothDamp(
             transform.position,
             new Vector3(posX, -2.0f, transform.position.z),
@@ -42,7 +51,7 @@ public class BartenderScript : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
     
         GameObject newDrink = (GameObject)Instantiate(drinkPrefabs[Random.Range(0, drinkPrefabs.Length)], transform.position, Quaternion.identity);
-        newDrink.GetComponent<Rigidbody2D>().velocity += new Vector2(Random.Range(-1.0f, 1.0f), 10.0f);
+        newDrink.GetComponent<Rigidbody2D>().velocity += new Vector2(Random.Range(-4.0f, 4.0f), 10.0f);
         StartCoroutine(ServeDrink());
     }
 }

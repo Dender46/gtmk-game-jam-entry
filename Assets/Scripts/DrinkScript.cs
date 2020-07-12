@@ -16,4 +16,10 @@ public class DrinkScript : MonoBehaviour
         Destroy(gameObject);
         gameData.playerAlcoholLevel += alcoholPower;
     }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name == "Floor")
+            Destroy(gameObject);
+    }
 }

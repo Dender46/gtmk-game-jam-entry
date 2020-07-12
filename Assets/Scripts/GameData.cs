@@ -5,4 +5,5 @@ using UnityEngine;
 public class GameData : MonoBehaviour
 {
     public float playerAlcoholLevel = 0.0f;
+    public bool gameHasStarted = false;
 }

@@ -13,7 +13,7 @@ public class PlayerControls : MonoBehaviour {
 	public float speed = 130f;
 
 	float horizontalMove;
-	bool jump	= false;
+	bool jump = false;
 	bool canMove = true;
 	bool canDrink = true;
 
@@ -34,6 +34,7 @@ public class PlayerControls : MonoBehaviour {
 
 		Collider2D hitCollider = Physics2D.OverlapCircle(transform.position, colliderRadius, LayerMask.GetMask("Drinks"), -0.5f, 0.5f);
 		if (hitCollider) {
+			gameData.gameHasStarted = true;
 			SoundManagerScript.PlaySound("gulp");
 			DrinkScript script = hitCollider.gameObject.GetComponent<DrinkScript>();
 			script.Use();
