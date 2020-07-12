@@ -18,11 +18,11 @@ public class BartenderScript : MonoBehaviour
     }
 
     private IEnumerator ServeDrink() {
-        float waitFor = Mathf.Min(2.0f, 2.0f - gameData.playerAlcoholLevel * 0.005f);
+        float waitFor = Mathf.Clamp(2.0f - gameData.playerAlcoholLevel * 0.0015f, 0.5f, 2.0f);
         Debug.Log("Waiting " + waitFor);
         yield return new WaitForSeconds(waitFor);
         
-        posX = Random.Range(3.0f, 15.0f);
+        posX = Random.Range(5.0f, 15.0f);
         transform.position = new Vector3(posX, -6.0f, transform.position.z);
         //Start the coroutine we define below named ExampleCoroutine.
         StartCoroutine(GenerateDrink());
