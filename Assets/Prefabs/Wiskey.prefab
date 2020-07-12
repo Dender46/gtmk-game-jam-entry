@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &111033704178988629
+--- !u!1 &2473478261641316220
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3107039609100459414}
-  - component: {fileID: 6421265066204033638}
+  - component: {fileID: 2473478261641316223}
+  - component: {fileID: 2473478261641316222}
   m_Layer: 0
-  m_Name: DrinkTextures_0
+  m_Name: DrinkTextures_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3107039609100459414
+--- !u!4 &2473478261641316223
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111033704178988629}
+  m_GameObject: {fileID: 2473478261641316220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5995337282684208868}
+  m_Father: {fileID: 2473478262078976230}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6421265066204033638
+--- !u!212 &2473478261641316222
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111033704178988629}
+  m_GameObject: {fileID: 2473478261641316220}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8000602937856044645, guid: b52c0cfb1f76c75469a0bdc59c5fed7e,
+  m_Sprite: {fileID: 3560815339556996280, guid: b52c0cfb1f76c75469a0bdc59c5fed7e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &5995337282684208871
+--- !u!1 &2473478262078976226
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,46 +90,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5995337282684208868}
-  - component: {fileID: 5995337282684208866}
-  - component: {fileID: 5995337282684208869}
-  - component: {fileID: 633241671}
+  - component: {fileID: 2473478262078976230}
+  - component: {fileID: 2473478262078976231}
+  - component: {fileID: 2473478262078976228}
+  - component: {fileID: 2473478262078976229}
   m_Layer: 10
-  m_Name: Wine
+  m_Name: Wiskey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5995337282684208868
+--- !u!4 &2473478262078976230
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5995337282684208871}
+  m_GameObject: {fileID: 2473478262078976226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.61, y: -3, z: 0}
+  m_LocalPosition: {x: 4.55, y: -1.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3107039609100459414}
+  - {fileID: 2473478261641316223}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5995337282684208866
+--- !u!61 &2473478262078976231
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5995337282684208871}
+  m_GameObject: {fileID: 2473478262078976226}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000011920929, y: -0.026845694}
+  m_Offset: {x: 0.0016453266, y: 0.023838997}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -140,30 +140,30 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24448991, y: 0.55349207}
+  m_Size: {x: 0.3530774, y: 0.4521227}
   m_EdgeRadius: 0
---- !u!114 &5995337282684208869
+--- !u!114 &2473478262078976228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5995337282684208871}
+  m_GameObject: {fileID: 2473478262078976226}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e7be299c4cfa5d44a51e2cf37745674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alcoholPower: 4
+  alcoholPower: 12
   alcoholGravity: 0
---- !u!50 &633241671
+--- !u!50 &2473478262078976229
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5995337282684208871}
+  m_GameObject: {fileID: 2473478262078976226}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
